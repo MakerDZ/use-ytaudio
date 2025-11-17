@@ -103,7 +103,7 @@ player.prev();
 
 ## Demo
 
-👉 Live demo (replace with your own deployment): `https://`
+👉 Live demo: [use-ytaudio.vercel.app](https://use-ytaudio.vercel.app/)
 
 To run locally:
 
