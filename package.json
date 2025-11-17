@@ -1,23 +1,45 @@
 {
   "name": "use-ytaudio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "React hook for controlling hidden YouTube audio playback.",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "tsup"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "hook",
+    "youtube",
+    "audio"
+  ],
+  "author": "zed",
   "license": "ISC",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
   "devDependencies": {
     "@types/react": "^19.2.5",
     "@types/youtube": "^0.1.2",
+    "react": "^19.2.0",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   },
-  "dependencies": {
-    "react": "^19.2.0"
+  "peerDependencies": {
+    "react": ">=18"
   }
 }
