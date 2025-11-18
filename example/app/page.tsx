@@ -51,6 +51,13 @@ export default function App() {
           </p>
         </header>
 
+       
+        <CodeBlock
+          code={`pnpm add use-ytaudio`}
+          language="bash"
+          title="Installation"
+        />
+
         {/* Tabs + content */}
         <main className="flex flex-col gap-6">
           {/* Tab menu */}
