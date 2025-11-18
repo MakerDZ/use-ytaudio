@@ -1,6 +1,6 @@
 {
   "name": "use-ytaudio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hook for controlling hidden YouTube audio playback.",
   "main": "./dist/index.js",
   "scripts": {
