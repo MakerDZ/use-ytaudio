@@ -13,23 +13,81 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "YouTube Audio Player",
-  description: "A simple React hook for controlling hidden YouTube audio playback.",
+  metadataBase: new URL("https://use-ytaudio.vercel.app"),
+  title: {
+    default: "YouTube Audio Player",
+    template: "%s | YouTube Audio Player",
+  },
+  description:
+    "A simple React hook for controlling hidden YouTube audio playback.",
+  keywords: [
+    "YouTube audio",
+    "React hook",
+    "YouTube player",
+    "audio player",
+    "hidden player",
+    "frontend tools",
+  ],
+  authors: [{ name: "Zed" }],
+  creator: "Zed",
+  publisher: "Zed",
   icons: {
     icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
+
+  // Open Graph
   openGraph: {
+    type: "website",
+    url: "https://your-domain.com",
     title: "YouTube Audio Player",
-    description: "A simple React hook for controlling hidden YouTube audio playback.",
-    images: "/og-image.png",
+    description:
+      "A simple React hook for controlling hidden YouTube audio playback.",
+    images: [
+      {
+        url: "https://us-east-1.tixte.net/uploads/zed.tixte.co/use-ytaudio.png",
+        width: 1200,
+        height: 630,
+        alt: "YouTube Audio Player preview",
+      },
+    ],
+  },
+
+  // Twitter
+  twitter: {
+    card: "summary_large_image",
+    title: "YouTube Audio Player",
+    description:
+      "A simple React hook for controlling hidden YouTube audio playback.",
+    images:
+      "https://us-east-1.tixte.net/uploads/zed.tixte.co/use-ytaudio.png",
+    creator: "zed",
+  },
+
+  // Robots
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  // Alternates (optional, good for SEO)
+  alternates: {
+    canonical: "/",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
